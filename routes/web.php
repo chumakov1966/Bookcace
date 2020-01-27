@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('test/show', 'My_controller@show');
 Route::get('/', function () {
     return 'Main page';
 });
@@ -23,3 +23,5 @@ Route::get('/post/1/', function () {
 Route::get('/post/{address}', function ($address) {
     return 'Post'.$address;
 });
+
+?>
