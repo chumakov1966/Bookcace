@@ -1,4 +1,5 @@
 <?php
+header("Content-type:text/html; charset=utf-8");
 
 /*
 |--------------------------------------------------------------------------
@@ -10,7 +11,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('test/show', 'My_controller@show');
+Route::get('test/show/', 'My_controller@show');
 Route::get('/', function () {
     return 'Main page';
 });
