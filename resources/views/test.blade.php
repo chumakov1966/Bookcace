@@ -7,10 +7,12 @@
 		<table>
 			<tbody>
 				<tr>
-					<td><a href="#"> Имя: {{$name}}</a></td>
+					<td> Имя:</td>
+					<td><a href="#"> {{$name}}</a></td>
 				</tr>
 				<tr>
-					<td><a href="#"> Фамилия:{{$surname}}</a></td>
+					<td>Фамилия:</td>
+					<td><a href="#">{{$surname}}</a></td>
 				</tr>
 			</tbody>
 		</table>
