@@ -11,18 +11,19 @@ header("Content-type:text/html; charset=utf-8");
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('test/show/', 'My_controller@show');
-Route::get('/', function () {
-    return 'Main page';
-});
-Route::get('/post/', function () {
-    return 'Post page';
-});
-Route::get('/post/1/', function () {
-    return 'First page';
-});
-Route::get('/post/{address}', function ($address) {
-    return 'Post'.$address;
-});
+ // Route::get('test/show/', 'My_controller@show');
+// Route::get('/', function () {
+    // return 'Main page';
+// });
+// Route::get('/post/', function () {
+    // return 'Post page';
+// });
+// Route::get('/post/1/', function () {
+    // return 'First page';
+// });
+// Route::get('/post/{address}', function ($address) {
+    // return 'Post'.$address;
+// });
+Route::get('/','Book@Take');
 
 ?>
