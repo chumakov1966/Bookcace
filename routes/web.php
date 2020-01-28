@@ -24,6 +24,7 @@ header("Content-type:text/html; charset=utf-8");
 // Route::get('/post/{address}', function ($address) {
     // return 'Post'.$address;
 // });
-Route::get('/','Book@Take');
+Route::get('/','Book@Case');
+Route::get('book/{id}','Book@Take');
 
 ?>
