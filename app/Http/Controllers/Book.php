@@ -44,16 +44,16 @@ class Book extends Controller
 			 // print $book_num. '<br>';
 		 // }
 	 // }
-	 public function Take($id){
-		var_dump ($id);
-		print '<br>';
-		print 'Bookcase'.'<pre>';var_dump ($this->book); print '</pre>';
-		print'Взять книгу с № '.$id.':'.'<br>';
-		foreach($this->book[$id] as $key=>$book_num){
-			if($key=$id){
-				print '<pre>'.$book_num.'</pre>';
-			}
-		}
-	}
+	 // public function Take($id){
+		// var_dump ($id);
+		// print '<br>';
+		// print 'Bookcase'.'<pre>';var_dump ($this->book); print '</pre>';
+		// print'Взять книгу с № '.$id.':'.'<br>';
+		// foreach($this->book[$id] as $key=>$book_num){
+			// if($key=$id){
+				// print '<pre>'.$book_num.'</pre>';
+			// }
+		// }
+	// }
  }
 ?>
