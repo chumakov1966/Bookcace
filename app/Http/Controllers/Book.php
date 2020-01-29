@@ -1,9 +1,9 @@
 <?php
-namespace App\Http\Controllers ;
+namespace App\Http\Controllers;
+use App\Models\Book as BookModel;
 use App\Http\Controllers\Controller;
 
-class Book extends Controller
- {
+class Book extends Controller{
 	// public $book;
 	// function __construct(){
 		 // $this->book=array(
@@ -43,23 +43,42 @@ class Book extends Controller
 			// }
 		// }
 	// }
-	 public $name;
-	 public $author;
-	 public function __construct($name, $author){
-		 $this->name=$name;
-		 $this->author=$autor;
-	 }
-	 $books=[
-		new Book('Руслан и Людмила ','Пушкин А.С.');
-		new Book('Война и мир', 'Толстой Л.Н.');
-		new Book('Му-му', 'Тургенев И.С');
-		new Book('Мастер и Маргарита', 'Булгаков М.А.');
-		 ];
-	public function Case(){
-		var_dump ($books);
+	 // public $name;
+	 // public $author;
+	 
+	 // public function __construct($name, $author){
+		 // $this->name=$name;
+		 // $this->author=$autor;
+	 // }
+	 
+	 // $books = [
+		// new Book('Руслан и Людмила ','Пушкин А.С.');
+		// new Book('Война и мир', 'Толстой Л.Н.');
+		// new Book('Му-му', 'Тургенев И.С');
+		// new Book('Мастер и Маргарита', 'Булгаков М.А.');
+		 // ];
+	// public function Case(){
+		// var_dump ($books);
 		// foreach($books as $book){
 			// print 'Книжный шкаф'.'<br>'.'Название: '.$book->name.'Автор: '.$book->author;
 		// }
+	// }
+	// public function __construct(BookModel $book){
+		// $this->books=$book;
+	// }
+	public function Bookcase(BookModel $book){
+		// var_dump ($book);
+		// foreach($book as $num_book){
+			// print $num_book->name;
+		// }
+		$nameBook=$book->Bookcase();
+		// dump($nameBook);
+		
+		foreach($nameBook as $allBook){
+			print '<pre>'.$allBook->name.'</pre>';
+		}
+		
 	}
+
  }
 ?>
