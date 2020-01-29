@@ -25,18 +25,6 @@ class Book extends Controller
 			 // )
 		 // );
 	 // }
-	 public $name;
-	 public $author;
-	 public function __construct($name, $author){
-		 $this->name;
-		 $this->author;
-	 }
-	 $books=[
-		new Book('Руслан и Людмила ','Пушкин А.С.');
-		new Book('Война и мир', 'Толстой Л.Н.');
-		new Book('Му-му', 'Тургенев И.С');
-		new Book('Мастер и Маргарита', 'Булгаков М.А.')
-	 ]
 	 // public function Case($id){
 		// var_dump ($id);
 		// var_dump ($this->book);
@@ -55,5 +43,23 @@ class Book extends Controller
 			// }
 		// }
 	// }
+	 public $name;
+	 public $author;
+	 public function __construct($name, $author){
+		 $this->name=$name;
+		 $this->author=$autor;
+	 }
+	 $books=[
+		new Book('Руслан и Людмила ','Пушкин А.С.');
+		new Book('Война и мир', 'Толстой Л.Н.');
+		new Book('Му-му', 'Тургенев И.С');
+		new Book('Мастер и Маргарита', 'Булгаков М.А.');
+		 ];
+	public function Case(){
+		var_dump ($books);
+		// foreach($books as $book){
+			// print 'Книжный шкаф'.'<br>'.'Название: '.$book->name.'Автор: '.$book->author;
+		// }
+	}
  }
 ?>
