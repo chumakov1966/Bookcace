@@ -23,5 +23,11 @@ class Book extends Model
 		return $books;
 		// return view('book.bookcase',['books'=>$books]);
 	}
+
+	public function BookId($id){
+		$book_id=Book::table(`book`)->were(`id`, $id)->first($id);
+		return $book_id($id);
+	}
+	
 }
 ?>

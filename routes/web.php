@@ -25,6 +25,6 @@ header("Content-type:text/html; charset=utf-8");
     // return 'Post'.$address;
 // });
 Route::get('/','Book@Bookcase');
-Route::get('book/{id}','Book@Take');
+Route::get('book/{id}','Book@Take_book')->name('id');
 
 ?>

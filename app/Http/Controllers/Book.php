@@ -65,7 +65,7 @@ class Book extends Controller{
 	// }
 	// public function __construct(BookModel $book){
 		// $this->books=$book;
-	// }
+	// }	
 	public function Bookcase(BookModel $book){
 		// var_dump ($book);
 		// foreach($book as $num_book){
@@ -80,6 +80,26 @@ class Book extends Controller{
 		}
 		
 	}
+	public function Take_book(BookModel $book_id){
+		// $id=$book_id->BookId($id);
+		// return $id->id;
+		
+		// function Id_Book($book_id){
+			// $id_b=$book_id->Bookcase();
+			// foreach($id_b as $key ){
+				// $this->key;
+				// return $key->id;
+			// }
+		// }
+		// $id=Id_Book();
+		function Id(){return $this->id;}
+		$id->Id();
+		$num_book=$book_id->BookId($id);
+		foreach($num_book as $id_book){
+			print $id_book;
+		}
+	}
+
 
  }
 ?>
