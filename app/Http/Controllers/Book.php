@@ -75,7 +75,8 @@ class Book extends Controller{
 		// dump($nameBook);
 		
 		foreach($nameBook as $allBook){
-			print '<pre>'.$allBook->name.'</pre>';
+			print 'Книжный шкаф';
+			print '<pre>'.$allBook->id.$allBook->name.' : '.$allBook->author.'<pre>';
 		}
 		
 	}
