@@ -80,7 +80,8 @@ class Book extends Controller{
 		}
 		
 	}
-	// public function Take_book(BookModel $book_id){
+	/* 
+	public function Take_book(BookModel $id, $b_id){
 		// $id=$book_id->BookId($id);
 		// return $id->id;
 		
@@ -94,15 +95,28 @@ class Book extends Controller{
 		// $id=Id_Book();
 		// function Id(){return $this->id;}
 		// $id->Id();
-		// $num_book=$book_id->BookId($id);
-		// foreach($num_book as $id_book){
-			// print $id_book;
-		// }
+		$num_book=$book_id->BookId($id);
+		 foreach($num_book as $id_book){
+			print $id_book;
+		 }
+		 // public function Take_book(BookModel $book){
+			// print $book;
+			// }
 	// }
-	public function BookId($id){
-		$book_id=Book::table(`book`)->were(`id`, $id)->first();
-		return $book_id($id);
+	// public function BookId($id){
+		// $book_id=Book::table(`book`)->were(`id`, $id)->first();
+		// return $book_id($id);
+	// }
+	} */
+	function Take_book(BookModel $book_id, $id){
+		$num_book=$book_id->BookId($id);
+		print 'Взять книгу'.$num_book->id.$num_book->name.$num_book->author;
 	}
+	function Read_book(BookModel $book_id, $id){
+		$num_book=$book_id->BookId($id);
+		print 'Читать '.$num_book->name.$num_book->author.'<br>'.$num_book->text;
+	}
+	
 
  }
 ?>

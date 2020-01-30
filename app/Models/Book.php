@@ -25,7 +25,7 @@ class Book extends Model
 	}
 
 	public function BookId($id){
-		$book_id=Book::table(`book`)->were(`id`, $id)->first($id);
+		$book_id=Book::where('id', $id)->first();
 		return $book_id;
 	}
 	

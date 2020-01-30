@@ -28,5 +28,6 @@ Route::get('/','Book@Bookcase');
 // Route::get('book/{id}', function ($id){
 	// Route::get('book/id','Book@Take_book');
 // })->name('id');
-Route::get('book/{id}','Book@BookId');
+ Route::get('book/{id}','Book@Take_book');
+ Route::get('book/{id}/read','Book@Read_book' )
 ?>
