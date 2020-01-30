@@ -80,7 +80,7 @@ class Book extends Controller{
 		}
 		
 	}
-	public function Take_book(BookModel $book_id){
+	// public function Take_book(BookModel $book_id){
 		// $id=$book_id->BookId($id);
 		// return $id->id;
 		
@@ -92,14 +92,17 @@ class Book extends Controller{
 			// }
 		// }
 		// $id=Id_Book();
-		function Id(){return $this->id;}
-		$id->Id();
-		$num_book=$book_id->BookId($id);
-		foreach($num_book as $id_book){
-			print $id_book;
-		}
+		// function Id(){return $this->id;}
+		// $id->Id();
+		// $num_book=$book_id->BookId($id);
+		// foreach($num_book as $id_book){
+			// print $id_book;
+		// }
+	// }
+	public function BookId($id){
+		$book_id=Book::table(`book`)->were(`id`, $id)->first();
+		return $book_id($id);
 	}
-
 
  }
 ?>
