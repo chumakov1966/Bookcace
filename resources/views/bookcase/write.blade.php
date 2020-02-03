@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Читаем {{$name}}</title>
+<title>Дописать {{$name}}</title>
 </head>
 <body>
 <div>{{$author}}</div>
