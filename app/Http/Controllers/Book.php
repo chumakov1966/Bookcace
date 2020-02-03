@@ -4,6 +4,7 @@ use App\Models\Book as BookModel;
 use App\Http\Controllers\Controller;
 
 class Book extends Controller{
+	/*
 	// public $book;
 	// function __construct(){
 		 // $this->book=array(
@@ -65,20 +66,25 @@ class Book extends Controller{
 	// }
 	// public function __construct(BookModel $book){
 		// $this->books=$book;
-	// }	
+	// }
+*/	
 	public function Bookcase(BookModel $book){
+		/*
 		// var_dump ($book);
 		// foreach($book as $num_book){
 			// print $num_book->name;
 		// }
+		*/
 		$nameBook=$book->Bookcase();
-		// dump($nameBook);
-		
-		foreach($nameBook as $allBook){
-			print 'Книжный шкаф';
-			print '<pre>'.$allBook->id.$allBook->name.' : '.$allBook->author.'<pre>';
+		foreach($nameBook as $allBook=>$viewBook){
+			// print 'Книжный шкаф';
+			// print '<pre>'.$viewBook->id.$viewBook->name.' : '.$viewBook->author.'<pre>';
+			
+			print view('bookcase.bookcase', ['name'=>$viewBook['name'].$viewBook['author']]);	
 		}
-		
+	// $this->nameBook;
+	// return view('bookcase.bookcase',['name'=>$nameBook['name']] )
+	 
 	}
 	/* 
 	public function Take_book(BookModel $id, $b_id){
@@ -110,13 +116,19 @@ class Book extends Controller{
 	} */
 	function Take_book(BookModel $book_id, $id){
 		$num_book=$book_id->BookId($id);
-		print 'Взять книгу'.$num_book->id.$num_book->name.$num_book->author;
+		// print view ('bookcase.book',['book'=>$num_book['id'].$num_book['name'].$num_book['author']]);
+		print view ('bookcase.book',['id'=>$num_book['id'], 'name'=>$num_book['name'], 'author'=>$num_book['author']]);
 	}
 	function Read_book(BookModel $book_id, $id){
 		$num_book=$book_id->BookId($id);
-		print 'Читать '.$num_book->name.$num_book->author.'<br>'.$num_book->text;
+		// $nameBook=$num_book['name'];
+		// $authorBook=$num_book['author'];
+		// $textBook=$num_book['text'];
+		// dump($textBook);
+		// print 'Читать :'.$num_book->name.$num_book->author.'<br>'.$num_book->text;
+		return view('bookcase.read',['id'=>$num_book['id'], 'name'=>$num_book['name'], 'author'=>$num_book['author'], 'text'=>$num_book['text']]);
 	}
-	
+	// function Insert_book
 
  }
 ?>

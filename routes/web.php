@@ -11,7 +11,7 @@ header("Content-type:text/html; charset=utf-8");
 | contains the "web" middleware group. Now create something great!
 |
 */
- // Route::get('test/show/', 'My_controller@show');
+ // Route::get('test/s/', 'My_controller@show');
 // Route::get('/', function () {
     // return 'Main page';
 // });
@@ -25,9 +25,6 @@ header("Content-type:text/html; charset=utf-8");
     // return 'Post'.$address;
 // });
 Route::get('/','Book@Bookcase');
-// Route::get('book/{id}', function ($id){
-	// Route::get('book/id','Book@Take_book');
-// })->name('id');
- Route::get('book/{id}','Book@Take_book');
- Route::get('book/{id}/read','Book@Read_book' )
+Route::get('book/{id}','Book@Take_book');
+Route::get('book/{id}/read','Book@Read_book');
 ?>

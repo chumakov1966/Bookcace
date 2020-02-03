@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model
 {
 	protected $table = 'book';
+	/*
 	// public function Bookcase(){
 		// $books=Book:: get();
 		// return view('book.index', ['books'=>$books]);
@@ -18,16 +19,20 @@ class Book extends Model
 			// print $num_book->name;
 		// }
 	// }
+	*/
 	public function Bookcase(){
 		$books=Book::get();
 		return $books;
-		// return view('book.bookcase',['books'=>$books]);
+		
 	}
 
 	public function BookId($id){
 		$book_id=Book::where('id', $id)->first();
 		return $book_id;
 	}
+	// public function BookInsert($text){
+		// $book_insert=Book::insert(['text'=>$text]);
+	// }
 	
 }
 ?>
