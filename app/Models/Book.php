@@ -30,17 +30,17 @@ class Book extends Model
 		$book_id=Book::where('id', $id)->first();
 		return $book_id;
 	}
-	public function BookWrite($id){
+/*	public function BookWrite($id){
 		$text=Book::where('text', $id)->first();
-		$book_write=Book::find('id');
-		$book_write->text=$text;
-		$book_write->save();
+		// $book_write=Book::find('id');
+		// $book_write->text=$text;
+		// $book_write->save();
 		// $book_write=Book::where('id', $id)
 			// ->where('text', $text)
 			// ->update('text'=>$id);
 
 		return $book_write;
-	}
+	}*/
 	
 }
 ?>

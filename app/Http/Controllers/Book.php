@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use App\Models\Book as BookModel;
 use App\Http\Controllers\Controller;
+use Request;
 
 
 class Book extends Controller{
@@ -129,16 +130,25 @@ class Book extends Controller{
 		// print 'Читать :'.$num_book->name.$num_book->author.'<br>'.$num_book->text;
 		return view('bookcase.read',['id'=>$num_book['id'], 'name'=>$num_book['name'], 'author'=>$num_book['author'], 'text'=>$num_book['text']]);
 	}
-	// function Write_book(BookModel $book_id, $id){
-		// $num_book=$book_id->BookId($id);
-		// dump($num_book);
-		// $text=$num_book['text'];
-		// dump($text);
-		// $id=$num_book['id'];
-		// dump($id);
-		// $text_new=BookModel::where('text', $text)->first();
-		// dump($text_new);
-		// dump ($text);
+	function Write_book(BookModel $book_id, $id){
+		$num_book=$book_id->BookId($id);
+		$text=$num_book['text'];
+		dump($text);
+		return view('bookcase.write',['id'=>$num_book['id'], 'name'=>$num_book['name'], 'author'=>$num_book['author'], 'text'=>$num_book['text']]);
+		// function update(Request, $request, $text);
+		// $book_write=Book::where('id', $id)
+			// ->where('text', $text)
+			// ->update('text'->$id);
+/*		$num_book=$book_id->BookId($id);
+		dump($num_book);
+		$text=$num_book['text'];
+		dump($text);
+		$id=$num_book['id'];
+		dump($id);
+		$text_new=BookModel::where('text', $text)->first();
+		dump($text_new);
+		dump ($text);
+*/
 		// $book_write=BookModel::find('id');
 		// $book_write->text=$text_new;
 		// $book_write->save();
@@ -146,7 +156,7 @@ class Book extends Controller{
 		dump($write_book);
 		*/
 		// return view('bookcase.write',['id'=>$num_book['id'], 'name'=>$num_book['name'], 'author'=>$num_book['author'], 'text'=>$num_book['text']]);
-	// }
+	}
 
  }
 ?>
