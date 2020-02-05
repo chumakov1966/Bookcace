@@ -16,9 +16,9 @@ class Book extends Model
 		$book_id=Book::where('id', $id)->first();
 		return $book_id;
 	}
-	// public function BookInsert($id, $text){
-		// $book_insert=Book::where('id',$id)->update(['text'=>$text]);
-		// return $book_insert;
-	// }
+	public function BookInsert($id, $text){
+		$book_insert=Book::where('id',$id)->update(['text'=>$text]);
+		return $book_insert;
+	}
 }
 ?>

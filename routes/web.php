@@ -29,5 +29,5 @@ Route::get('book/{id}','Book@Take_book');
 Route::get('book/{id}/read','Book@Read_book');
 Route::get('book/{id}/write', 'Book@Write_book');
 Route::any('book/{id}/write/save', 'Book@store');
-Route::any('book/{id}/write/save/save','Book@Book_insert');
+// Route::any('book/{id}/write/save/save','Book@Book_insert');
 ?>
