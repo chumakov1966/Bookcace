@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model
 {
 	protected $table = 'book';
+	public $timestamps = false;
 	public function Bookcase(){
 		$books=Book::get();
 		return $books;		
@@ -15,5 +16,9 @@ class Book extends Model
 		$book_id=Book::where('id', $id)->first();
 		return $book_id;
 	}
+	// public function BookInsert($id, $text){
+		// $book_insert=Book::where('id',$id)->update(['text'=>$text]);
+		// return $book_insert;
+	// }
 }
 ?>

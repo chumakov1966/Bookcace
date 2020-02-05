@@ -6,13 +6,14 @@
 <body>
 <div>{{$author}}</div>
 <div>{{$name}}</div>
-<form id="text" method="post" action="Book.php"  >
+<form id="text" method="Post" action="http://mvc/book/{{$id}}/write/save">
 	<div>
-		<textarea style="width:100%; height:500px;" form="text"  name="text" type="text">{{$text}}</textarea>
+		<textarea style="width:100%; height:500px;" name="text">{{$text}}</textarea>
 	</div>
 	<div>
 		<input type="submit" name="submit" form="text" value="Дописать">
 	</div>
+	{{ csrf_field() }} 
 </form>
 </body>
 </html>
