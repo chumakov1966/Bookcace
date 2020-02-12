@@ -11,10 +11,12 @@ header("Content-type:text/html; charset=utf-8");
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/* Маршруты для "Книжного шкафа"*/
 Route::get('/','Book@Bookcase');
 Route::get('book/{id}','Book@Take_book');
 Route::get('book/{id}/read','Book@Read_book');
 Route::get('book/{id}/write', 'Book@Write_book');
 Route::any('book/{id}/write/save', 'Book@store');
+
+
 ?>

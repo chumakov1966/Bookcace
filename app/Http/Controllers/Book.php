@@ -29,7 +29,7 @@ class Book extends Controller{
 		 $new_book=$request->input('text');
 		 $book_insert=$new_text->BookInsert($id,$new_book);
 		 $num_book=$new_text->BookId($id);
-		return view('bookcase.write',['id'=>$num_book['id'], 'name'=>$num_book['name'], 'author'=>$num_book['author'], 'text'=>$num_book['text']]);		 
+		return view('bookcase.save',['id'=>$num_book['id'], 'name'=>$num_book['name'], 'author'=>$num_book['author'], 'text'=>$num_book['text']]);		 
 	}
  }
 ?>

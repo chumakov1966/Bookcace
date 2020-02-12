@@ -9,15 +9,15 @@ class Book extends Model
 	protected $table = 'book';
 	public $timestamps = false;
 	public function Bookcase(){
-		$books=Book::get();
+		$books=$this->get();
 		return $books;		
 	}
 	public function BookId($id){
-		$book_id=Book::where('id', $id)->first();
+		$book_id=$this->where('id', $id)->first();
 		return $book_id;
 	}
 	public function BookInsert($id, $text){
-		$book_insert=Book::where('id',$id)->update(['text'=>$text]);
+		$book_insert=$this->where('id',$id)->update(['text'=>$text]);
 		return $book_insert;
 	}
 }
